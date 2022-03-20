@@ -90,3 +90,14 @@ Sun Mar 20 18:33:07 UTC 2022:
  tests:  1|5
 total_score: 10/70
 7ad32a7
+Sun Mar 20 18:37:33 UTC 2022: 
+ list.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:5:0:
+list.c: In function ‘firstList’:
+list.c:41:8: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+     if(list->head = NULL)
+        ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+f5e829a
