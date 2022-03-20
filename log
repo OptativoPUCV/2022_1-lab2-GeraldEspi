@@ -101,3 +101,15 @@ list.c:41:8: error: suggest parentheses around assignment used as truth value [-
 cc1: all warnings being treated as errors
 Compilation failed
 f5e829a
+Sun Mar 20 18:37:58 UTC 2022: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+list.c: In function ‘firstList’:
+list.c:41:8: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+     if(lista->head = NULL)
+        ^~~~~
+        list
+list.c:41:8: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+9905b08
