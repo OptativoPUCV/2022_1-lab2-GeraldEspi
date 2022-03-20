@@ -30,3 +30,18 @@ list.c:36:13: error: return from incompatible pointer type [-Werror=incompatible
 cc1: all warnings being treated as errors
 Compilation failed
 2c46183
+Sun Mar 20 18:32:12 UTC 2022: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+list.c: In function ‘createList’:
+list.c:32:21: error: ‘list’ undeclared (first use in this function); did you mean ‘lista’?
+      List* lista = (list *) calloc(1,sizeof(list));
+                     ^~~~
+                     lista
+list.c:32:21: note: each undeclared identifier is reported only once for each function it appears in
+list.c:32:27: error: expected expression before ‘)’ token
+      List* lista = (list *) calloc(1,sizeof(list));
+                           ^
+Compilation failed
+deda46d
