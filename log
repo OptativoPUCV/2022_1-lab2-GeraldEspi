@@ -439,3 +439,12 @@ list.c:111:1: error: expected identifier or ‘(’ before ‘}’ token
  ^
 Compilation failed
 8846891
+Sun Mar 20 22:15:01 UTC 2022: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+list.c:111:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+Compilation failed
+233d27b
