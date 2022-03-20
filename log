@@ -414,3 +414,19 @@ Sun Mar 20 21:55:30 UTC 2022:
  tests:  10|2
 total_score: 45/70
 da817d0
+Sun Mar 20 22:14:16 UTC 2022: 
+ list.c | 16 +++++++++-------
+ 1 file changed, 9 insertions(+), 7 deletions(-)
+In file included from test.c:5:0:
+list.c: In function ‘pushCurrent’:
+list.c:107:30: error: ‘nodo’ undeclared (first use in this function); did you mean ‘Node’?
+        list->current->next = nodo;}
+                              ^~~~
+                              Node
+list.c:107:30: note: each undeclared identifier is reported only once for each function it appears in
+list.c: At top level:
+list.c:111:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+Compilation failed
+95dc9f8
