@@ -1,0 +1,32 @@
+Sun Mar 20 18:31:15 UTC 2022: 
+ list.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+list.c: In function ‘createList’:
+list.c:32:6: error: unknown type name ‘list’; did you mean ‘List’?
+      list* lista = (list *) calloc(1,sizeof(list));
+      ^~~~
+      List
+list.c:32:21: error: ‘list’ undeclared (first use in this function); did you mean ‘lista’?
+      list* lista = (list *) calloc(1,sizeof(list));
+                     ^~~~
+                     lista
+list.c:32:21: note: each undeclared identifier is reported only once for each function it appears in
+list.c:32:27: error: expected expression before ‘)’ token
+      list* lista = (list *) calloc(1,sizeof(list));
+                           ^
+list.c:33:11: error: request for member ‘head’ in something not a structure or union
+      lista->head = NULL;
+           ^~
+list.c:34:11: error: request for member ‘current’ in something not a structure or union
+      lista->current = NULL;
+           ^~
+list.c:35:11: error: request for member ‘tail’ in something not a structure or union
+      lista->tail = NULL;
+           ^~
+list.c:36:13: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+      return lista;
+             ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2c46183
