@@ -121,40 +121,7 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-  if(list->current == NULL){
-    return NULL;
-    } 
-  if((list->current->next != NULL) &&
-    (list->current->prev == NULL))
-      {
-        list->current = list->head->next;
-        list->current->prev = NULL;
-        free(list->head); // LIBERO MEMORIA LIBRE
-        list->head = list->current;
-      }
-
-  Node * n = createNode(list->current->data);
-  n->next = list->current->next;
-  n->prev = list->current->prev;
-  
-  if((list->current->next != NULL) && 
-    (list->current->prev != NULL)){
-    
-    free(list->current);
-    list->current = n->prev;
-    list->current->next = n->next;
-    list->current->next->prev = n->prev;
-  }
-
-  if((list->current->prev != NULL) && 
-    (list->current->next == NULL)) // caso en el que la lista no esté vacia
-  {
-    list->current = list->current->prev; // el previo pasa a ser el current asi podré eleiminar el siguiente
-    free(list->tail);// libero memoria del nodo eliminado
-    list->tail = list->current;
-    
-  }
-  
+ 
 }
 
 void cleanList(List * list) {
