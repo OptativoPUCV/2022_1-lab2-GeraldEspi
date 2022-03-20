@@ -84,3 +84,9 @@ list.c:32:45: error: ‘list’ undeclared (first use in this function); did you
 list.c:32:45: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 a8e1dd8
+Sun Mar 20 18:33:07 UTC 2022: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|5
+total_score: 10/70
+7ad32a7

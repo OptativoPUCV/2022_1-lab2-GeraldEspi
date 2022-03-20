@@ -29,7 +29,7 @@ Node * createNode(void * data) {
 }
 
 List * createList() {
-     List* lista = (List *) calloc(1,sizeof(list));
+     List* lista = (List *) calloc(1,sizeof(List));
      lista->head = NULL;
      lista->current = NULL;
      lista->tail = NULL;
