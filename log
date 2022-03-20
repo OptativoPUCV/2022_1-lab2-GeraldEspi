@@ -124,3 +124,14 @@ list.c:41:8: error: suggest parentheses around assignment used as truth value [-
 cc1: all warnings being treated as errors
 Compilation failed
 1f72013
+Sun Mar 20 18:38:35 UTC 2022: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+list.c: In function ‘firstList’:
+list.c:41:8: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+     if((list->head) = NULL)
+        ^
+cc1: all warnings being treated as errors
+Compilation failed
+f60d07c
