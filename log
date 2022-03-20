@@ -72,3 +72,15 @@ list.c:32:44: error: ‘list’ undeclared (first use in this function); did you
 list.c:32:44: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 d5f0598
+Sun Mar 20 18:32:54 UTC 2022: 
+ list.c | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+In file included from test.c:5:0:
+list.c: In function ‘createList’:
+list.c:32:45: error: ‘list’ undeclared (first use in this function); did you mean ‘lista’?
+      List* lista = (List *) calloc(1,sizeof(list));
+                                             ^~~~
+                                             lista
+list.c:32:45: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+a8e1dd8
