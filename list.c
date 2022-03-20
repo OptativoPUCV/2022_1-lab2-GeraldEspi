@@ -151,7 +151,7 @@ void * popCurrent(List * list) {
   if((list->current->prev != NULL) && 
     (list->current->next == NULL)) // caso en el que la lista no esté vacia
   {
-    list->current = list->current->prev // el previo pasa a ser el current asi podré eleiminar el siguiente
+    list->current = list->current->prev; // el previo pasa a ser el current asi podré eleiminar el siguiente
     free(list->tail);// libero memoria del nodo eliminado
     list->tail = list->current;
     
