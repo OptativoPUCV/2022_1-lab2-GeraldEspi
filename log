@@ -198,3 +198,24 @@ list.c:43:5: error: ‘else’ without a previous ‘if’
 cc1: all warnings being treated as errors
 Compilation failed
 978195f
+Sun Mar 20 18:40:19 UTC 2022: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+list.c: In function ‘firstList’:
+list.c:41:26: error: expected expression before ‘==’ token
+     if(list->head->data) == NULL)
+                          ^~
+list.c:41:5: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+     if(list->head->data) == NULL)
+     ^~
+list.c:41:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+     if(list->head->data) == NULL)
+                                 ^
+list.c:41:33: error: expected statement before ‘)’ token
+list.c:43:5: error: ‘else’ without a previous ‘if’
+     else {return list->head->data;}
+     ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+c6cdbb7
