@@ -41,7 +41,6 @@ void * firstList(List * list) {
     if(list->head->data) == NULL) 
     {return NULL;}
     else {return list->head->data;}
-    return NULL;
 }
 
 void * nextList(List * list) {
