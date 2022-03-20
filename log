@@ -368,3 +368,19 @@ Sun Mar 20 20:14:05 UTC 2022:
  tests:  9|3
 total_score: 35/70
 bda3487
+Sun Mar 20 20:31:22 UTC 2022: 
+ list.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:5:0:
+list.c: In function ‘pushFront’:
+list.c:78:10: error: ‘List {aka struct List}’ has no member named ‘first’
+   if(list->first==NULL)
+          ^~
+list.c:79:8: error: ‘List {aka struct List}’ has no member named ‘first’
+   {list->first = n;}
+        ^~
+list.c:80:13: error: ‘List {aka struct List}’ has no member named ‘first’
+   else {list->first->prev = n;}
+             ^~
+Compilation failed
+59d8e1d
