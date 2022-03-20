@@ -501,3 +501,17 @@ list.c:160:1: error: control reaches end of non-void function [-Werror=return-ty
 cc1: all warnings being treated as errors
 Compilation failed
 b83ab68
+Sun Mar 20 23:50:04 UTC 2022: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+list.c: In function ‘popCurrent’:
+list.c:155:5: error: expected ‘;’ before ‘free’
+     free(list->tail);// libero memoria del nodo eliminado
+     ^~~~
+list.c:160:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+6f9b9e9

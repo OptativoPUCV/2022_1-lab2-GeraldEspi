@@ -131,7 +131,7 @@ void * popCurrent(List * list) {
       {
         list->current = list->head->next;
         list->current->prev = NULL;
-        free(list->head) // LIBERO MEMORIA LIBRE
+        free(list->head); // LIBERO MEMORIA LIBRE
         list->head = list->current;
       }
 
