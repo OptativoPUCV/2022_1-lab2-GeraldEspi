@@ -131,9 +131,8 @@ void * popCurrent(List * list) {
     (list->current->next != NULL)){
     list->current = list->head->next;
     list->current->prev = NULL;
-    list->head = list->current;
     free(list->head); //LIBERO MEMORIA 
-    
+    list->head = list->current;
   }
 
   if((list->current->prev != NULL) &&
@@ -150,7 +149,7 @@ void * popCurrent(List * list) {
     list->current->next = n->next;
     list->current->next->prev = n->prev;
   }
-  if(list->current == NULL){return NULL;}
+   if(list->current == NULL){return NULL;}
   return n->data;
 }
 
