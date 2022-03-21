@@ -120,7 +120,7 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) {
    if(list->current == NULL){return NULL;}
-  return list->current->data;
+  return n->data;
 }
 
 void cleanList(List * list) {
