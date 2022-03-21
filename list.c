@@ -150,7 +150,7 @@ void * popCurrent(List * list) {
     list->current->next->prev = n->prev;
   }
 
-  return nodo->data;
+  return n->data;
  
 }
 
