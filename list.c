@@ -123,8 +123,11 @@ void * popBack(List * list) {
 void * popCurrent(List * list) {
   if(list->current == NULL){return NULL;}
 
+  Node * n = createNode(list->current->data);
+  n->next = list->current->next;
+  n->prev = list->current->prev;
 
-  if((list->current->next != NULL) && (list->current->prev == NULL)){
+  if((list->current->prev == NULL) && (list->current->next != NULL)){
     list->current = list->head->next;
     list->current->prev = NULL;
     free(list->head); //LIBERO MEMORIA 
@@ -137,10 +140,6 @@ void * popCurrent(List * list) {
     free(list->tail);
     list->tail = list->current;
   }
-
-  Node * n = createNode(list->current->data);
-  n->next = list->current->next;
-  n->prev = list->current->prev;
   
   if((list->current->next != NULL) && (list->current->prev != NULL)){
     free(list->current);
