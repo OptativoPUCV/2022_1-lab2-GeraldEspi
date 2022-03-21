@@ -702,3 +702,23 @@ Mon Mar 21 00:45:13 UTC 2022:
  tests:  12|0
 total_score: 70/70
 d62f1e9
+Mon Mar 21 00:46:08 UTC 2022: 
+ list.c | 26 --------------------------
+ 1 file changed, 26 deletions(-)
+In file included from test.c:5:0:
+list.c:126:4: error: expected identifier or ‘(’ before ‘if’
+    if(list->current == NULL){return NULL;}
+    ^~
+list.c:127:3: error: expected identifier or ‘(’ before ‘return’
+   return n->data;
+   ^~~~~~
+list.c:128:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+list.c: In function ‘popCurrent’:
+list.c:125:3: error: control reaches end of non-void function [-Werror=return-type]
+   }
+   ^
+cc1: all warnings being treated as errors
+Compilation failed
+f481e66
