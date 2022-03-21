@@ -653,3 +653,18 @@ Mon Mar 21 00:41:07 UTC 2022:
  tests:  12|0
 total_score: 70/70
 b26f04b
+Mon Mar 21 00:41:40 UTC 2022: 
+ list.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+In file included from test.c:5:0:
+list.c: In function ‘popCurrent’:
+list.c:146:21: error: ‘n’ undeclared (first use in this function)
+     list->current = n->prev;
+                     ^
+list.c:146:21: note: each undeclared identifier is reported only once for each function it appears in
+list.c:151:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+405b903
